@@ -82,19 +82,15 @@ body.night-mode #night-mode-toggle {
 
 .sunflower-container {
     position: relative;
-    bottom: -50px;
+    bottom: -5vh;
     animation: sway 12s ease-in-out infinite;
     transform-origin: bottom center;
-}
-@media (hover: hover) {
-    .sunflower-container:hover {
-        animation-play-state: paused;
-    }
+    transform: scale(1); /* se ajustará con media queries */
 }
 
 .stem {
-    width: 15px;
-    height: 400px;
+    width: 2vw;    /* antes 15px */
+    height: 50vh;  /* antes 400px */
     background: linear-gradient(to right, #4a7d29, #6a9c40);
     border-radius: 10px;
     position: absolute;
@@ -128,18 +124,18 @@ body.night-mode #night-mode-toggle {
 
 
 .head {
-    width: 250px;
-    height: 250px;
+    width: 35vw;   /* antes 250px */
+    height: 35vw;  /* proporcional al ancho de pantalla */
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 380px;
+    bottom: 50vh;  /* ajusta según tu diseño */
 }
 
 
 .center {
-    width: 120px;
-    height: 120px;
+    width: 15vw;   /* antes 120px */
+    height: 15vw;
     background: radial-gradient(ellipse at center, #6b4a2f 0%, #4a301a 100%);
     border-radius: 50%;
     position: absolute;
@@ -263,6 +259,106 @@ body.night-mode #night-mode-toggle {
     width: 100%;
     height: 100%;
     pointer-events: none;
+
+    /* --- Responsive para móviles --- */
+@media (max-width: 768px) {
+    .sunflower-container {
+        transform: scale(1.2); /* agranda el girasol en pantallas pequeñas */
+        bottom: -2vh;
+    }
+
+    .head {
+        width: 35vw;   /* se adapta al ancho de pantalla */
+        height: 35vw;
+        bottom: 40vh;
+    }
+
+    .center {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .stem {
+        width: 2vw;
+        height: 45vh;
+    }
+
+    .leaf.leaf-1 {
+        width: 12vw;
+        height: 16vw;
+        bottom: 20vh;
+        left: 5vw;
+    }
+
+    .leaf.leaf-2 {
+        width: 11vw;
+        height: 14vw;
+        bottom: 12vh;
+        left: 20vw;
+    }
+
+    .floating-phrase {
+        font-size: 6vw; /* texto escala con pantalla */
+        color: #ffffff; /* blanco */
+        -webkit-text-stroke: 2px black; /* borde negro */
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    }
+
+    #night-mode-toggle {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+    }
+}
+/* --- Responsive para móviles --- */
+@media (max-width: 768px) {
+    .sunflower-container {
+        transform: scale(1.2); /* agranda el girasol en pantallas pequeñas */
+        bottom: -2vh;
+    }
+
+    .head {
+        width: 35vw;   /* se adapta al ancho de pantalla */
+        height: 35vw;
+        bottom: 40vh;
+    }
+
+    .center {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .stem {
+        width: 2vw;
+        height: 45vh;
+    }
+
+    .leaf.leaf-1 {
+        width: 12vw;
+        height: 16vw;
+        bottom: 20vh;
+        left: 5vw;
+    }
+
+    .leaf.leaf-2 {
+        width: 11vw;
+        height: 14vw;
+        bottom: 12vh;
+        left: 20vw;
+    }
+
+    .floating-phrase {
+        font-size: 6vw; /* texto escala con pantalla */
+        color: #ffffff; /* blanco */
+        -webkit-text-stroke: 2px black; /* borde negro */
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    }
+
+    #night-mode-toggle {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+    }
+}
+
 }</style>
 </head>
 <body>
@@ -416,59 +512,8 @@ window.onload = () => {
 
 <!-- Tu script externo -->
 <script src="script.js"></script>
-<head>
-  <style>
-    /* Aquí ya tienes todo tu CSS del girasol */
 
-    /* --- Responsive para móviles --- */
-    @media (max-width: 768px) {
-        .sunflower-container {
-            transform: scale(0.7);
-            bottom: -30px;
-        }
 
-        .head {
-            width: 180px;
-            height: 180px;
-            bottom: 280px;
-        }
-
-        .center {
-            width: 90px;
-            height: 90px;
-        }
-
-        .stem {
-            height: 280px;
-            width: 10px;
-        }
-
-        .leaf.leaf-1 {
-            width: 60px;
-            height: 80px;
-            bottom: 140px;
-            left: 20px;
-        }
-
-        .leaf.leaf-2 {
-            width: 55px;
-            height: 70px;
-            bottom: 90px;
-            left: 100px;
-        }
-
-        .floating-phrase {
-            font-size: 20px;
-            -webkit-text-stroke: 2px black;
-        }
-
-        #night-mode-toggle {
-            font-size: 12px;
-            padding: 8px 12px;
-        }
-    }
-  </style>
-</head>
 
 </body>
 </html>
