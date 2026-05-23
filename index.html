@@ -82,15 +82,19 @@ body.night-mode #night-mode-toggle {
 
 .sunflower-container {
     position: relative;
-    bottom: -5vh;
+    bottom: -50px;
     animation: sway 12s ease-in-out infinite;
     transform-origin: bottom center;
-    transform: scale(1); /* se ajustará con media queries */
+}
+@media (hover: hover) {
+    .sunflower-container:hover {
+        animation-play-state: paused;
+    }
 }
 
 .stem {
-    width: 2vw;    /* antes 15px */
-    height: 50vh;  /* antes 400px */
+    width: 15px;
+    height: 400px;
     background: linear-gradient(to right, #4a7d29, #6a9c40);
     border-radius: 10px;
     position: absolute;
@@ -124,18 +128,18 @@ body.night-mode #night-mode-toggle {
 
 
 .head {
-    width: 35vw;   /* antes 250px */
-    height: 35vw;  /* proporcional al ancho de pantalla */
+    width: 250px;
+    height: 250px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50vh;  /* ajusta según tu diseño */
+    bottom: 380px;
 }
 
 
 .center {
-    width: 15vw;   /* antes 120px */
-    height: 15vw;
+    width: 120px;
+    height: 120px;
     background: radial-gradient(ellipse at center, #6b4a2f 0%, #4a301a 100%);
     border-radius: 50%;
     position: absolute;
@@ -263,99 +267,50 @@ body.night-mode #night-mode-toggle {
     /* --- Responsive para móviles --- */
 @media (max-width: 768px) {
     .sunflower-container {
-        transform: scale(1.2); /* agranda el girasol en pantallas pequeñas */
-        bottom: -2vh;
+        transform: scale(1.4); /* agranda más el girasol */
+        bottom: -5vh;
     }
 
     .head {
-        width: 35vw;   /* se adapta al ancho de pantalla */
-        height: 35vw;
-        bottom: 40vh;
+        width: 45vw;   /* más grande para que se vean los pétalos */
+        height: 45vw;
+        bottom: 35vh;
     }
 
     .center {
-        width: 15vw;
-        height: 15vw;
+        width: 20vw;
+        height: 20vw;
     }
 
     .stem {
-        width: 2vw;
-        height: 45vh;
+        width: 3vw;
+        height: 50vh;
     }
 
     .leaf.leaf-1 {
-        width: 12vw;
-        height: 16vw;
-        bottom: 20vh;
-        left: 5vw;
-    }
-
-    .leaf.leaf-2 {
-        width: 11vw;
-        height: 14vw;
-        bottom: 12vh;
-        left: 20vw;
-    }
-
-    .floating-phrase {
-        font-size: 6vw; /* texto escala con pantalla */
-        color: #ffffff; /* blanco */
-        -webkit-text-stroke: 2px black; /* borde negro */
-        text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-    }
-
-    #night-mode-toggle {
-        font-size: 4vw;
-        padding: 2vw 3vw;
-    }
-}
-/* --- Responsive para móviles --- */
-@media (max-width: 768px) {
-    .sunflower-container {
-        transform: scale(1.2); /* agranda el girasol en pantallas pequeñas */
-        bottom: -2vh;
-    }
-
-    .head {
-        width: 35vw;   /* se adapta al ancho de pantalla */
-        height: 35vw;
-        bottom: 40vh;
-    }
-
-    .center {
         width: 15vw;
-        height: 15vw;
-    }
-
-    .stem {
-        width: 2vw;
-        height: 45vh;
-    }
-
-    .leaf.leaf-1 {
-        width: 12vw;
-        height: 16vw;
-        bottom: 20vh;
-        left: 5vw;
+        height: 20vw;
+        bottom: 22vh;
+        left: 8vw;
     }
 
     .leaf.leaf-2 {
-        width: 11vw;
-        height: 14vw;
-        bottom: 12vh;
-        left: 20vw;
+        width: 14vw;
+        height: 18vw;
+        bottom: 14vh;
+        left: 22vw;
     }
 
     .floating-phrase {
-        font-size: 6vw; /* texto escala con pantalla */
-        color: #ffffff; /* blanco */
-        -webkit-text-stroke: 2px black; /* borde negro */
-        text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+        font-size: 7vw; /* letras más grandes en móvil */
+        color: #ffffff;
+        -webkit-text-stroke: 2.5px black; /* borde negro más grueso */
+        text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
     }
 
     #night-mode-toggle {
-        font-size: 4vw;
-        padding: 2vw 3vw;
+        font-size: 5vw; /* botón más grande */
+        padding: 3vw 4vw;
     }
 }
 
@@ -512,8 +467,5 @@ window.onload = () => {
 
 <!-- Tu script externo -->
 <script src="script.js"></script>
-
-
-
 </body>
 </html>
