@@ -416,5 +416,59 @@ window.onload = () => {
 
 <!-- Tu script externo -->
 <script src="script.js"></script>
+<head>
+  <style>
+    /* Aquí ya tienes todo tu CSS del girasol */
+
+    /* --- Responsive para móviles --- */
+    @media (max-width: 768px) {
+        .sunflower-container {
+            transform: scale(0.7);
+            bottom: -30px;
+        }
+
+        .head {
+            width: 180px;
+            height: 180px;
+            bottom: 280px;
+        }
+
+        .center {
+            width: 90px;
+            height: 90px;
+        }
+
+        .stem {
+            height: 280px;
+            width: 10px;
+        }
+
+        .leaf.leaf-1 {
+            width: 60px;
+            height: 80px;
+            bottom: 140px;
+            left: 20px;
+        }
+
+        .leaf.leaf-2 {
+            width: 55px;
+            height: 70px;
+            bottom: 90px;
+            left: 100px;
+        }
+
+        .floating-phrase {
+            font-size: 20px;
+            -webkit-text-stroke: 2px black;
+        }
+
+        #night-mode-toggle {
+            font-size: 12px;
+            padding: 8px 12px;
+        }
+    }
+  </style>
+</head>
+
 </body>
 </html>
