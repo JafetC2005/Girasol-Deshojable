@@ -313,6 +313,55 @@ body.night-mode #night-mode-toggle {
         padding: 3vw 4vw;
     }
 }
+/* --- Responsive especial para celulares --- */
+@media (max-width: 480px) {
+    .sunflower-container {
+        transform: scale(1.8); /* agranda bastante el girasol */
+        bottom: -20px;
+    }
+
+    .head {
+        width: 220px;   /* tamaño fijo en celular */
+        height: 220px;
+        bottom: 260px;
+    }
+
+    .center {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stem {
+        width: 14px;
+        height: 320px;
+    }
+
+    .leaf.leaf-1 {
+        width: 80px;
+        height: 100px;
+        bottom: 160px;
+        left: 30px;
+    }
+
+    .leaf.leaf-2 {
+        width: 75px;
+        height: 90px;
+        bottom: 110px;
+        left: 120px;
+    }
+
+    .floating-phrase {
+        font-size: 24px; /* letras grandes y claras */
+        color: #ffffff;
+        -webkit-text-stroke: 3px black;
+        text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
+    }
+
+    #night-mode-toggle {
+        font-size: 16px; /* botón más grande y legible */
+        padding: 10px 16px;
+    }
+}
 
 }</style>
 </head>
