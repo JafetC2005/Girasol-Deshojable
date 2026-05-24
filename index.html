@@ -82,10 +82,11 @@ body.night-mode #night-mode-toggle {
 
 .sunflower-container {
     position: relative;
-    bottom: -50px;
+    bottom: -5vh;
     animation: sway 12s ease-in-out infinite;
     transform-origin: bottom center;
 }
+
 @media (hover: hover) {
     .sunflower-container:hover {
         animation-play-state: paused;
@@ -93,8 +94,8 @@ body.night-mode #night-mode-toggle {
 }
 
 .stem {
-    width: 15px;
-    height: 400px;
+    width: 2vw;   /* antes 15px */
+    height: 50vh; /* antes 400px */
     background: linear-gradient(to right, #4a7d29, #6a9c40);
     border-radius: 10px;
     position: absolute;
@@ -111,35 +112,33 @@ body.night-mode #night-mode-toggle {
 }
 
 .leaf.leaf-1 {
-    width: 80px;
-    height: 100px;
-    bottom: 200px;
-    left: 30px;
+    width: 12vw;
+    height: 15vw;
+    bottom: 25vh;
+    left: 8vw;
     transform: rotate(10deg);
 }
 
 .leaf.leaf-2 {
-    width: 70px;
-    height: 90px;
-    bottom: 120px;
-    left: 135px;
+    width: 11vw;
+    height: 14vw;
+    bottom: 15vh;
+    left: 20vw;
     transform: rotate(-10deg) scaleX(-1);
 }
 
-
 .head {
-    width: 250px;
-    height: 250px;
+    width: 35vw;   /* antes 250px */
+    height: 35vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 380px;
+    bottom: 50vh;
 }
 
-
 .center {
-    width: 120px;
-    height: 120px;
+    width: 15vw;   /* antes 120px */
+    height: 15vw;
     background: radial-gradient(ellipse at center, #6b4a2f 0%, #4a301a 100%);
     border-radius: 50%;
     position: absolute;
@@ -150,7 +149,6 @@ body.night-mode #night-mode-toggle {
     box-shadow: inset 0 0 15px #2a1a0a;
 }
 
-
 .center::before {
     content: '';
     position: absolute;
@@ -158,13 +156,12 @@ body.night-mode #night-mode-toggle {
     height: 100%;
     border-radius: 50%;
     background-image:
-            radial-gradient(#9d785a 15%, transparent 16%),
-            radial-gradient(#9d785a 15%, transparent 16%);
+        radial-gradient(#9d785a 15%, transparent 16%),
+        radial-gradient(#9d785a 15%, transparent 16%);
     background-size: 10px 10px;
     background-position: 0 0, 5px 5px;
     opacity: 0.3;
 }
-
 
 .petal {
     position: absolute;
@@ -175,26 +172,25 @@ body.night-mode #night-mode-toggle {
     border: 1px solid #ffc800;
 }
 
-
 .petal-back {
-    width: 60px;
-    height: 140px;
+    width: 8vw;   /* antes 60px */
+    height: 18vw; /* antes 140px */
     background: linear-gradient(to top, #e6b800, #ffd700);
     border-radius: 50% 50% 0 0;
     z-index: 1;
 }
 
 .petal-middle {
-    width: 50px;
-    height: 120px;
+    width: 7vw;   /* antes 50px */
+    height: 15vw; /* antes 120px */
     background: linear-gradient(to top, #ffcc00, #ffea80);
     border-radius: 50% 50% 0 0;
     z-index: 2;
 }
 
 .petal-front {
-    width: 40px;
-    height: 100px;
+    width: 6vw;   /* antes 40px */
+    height: 12vw; /* antes 100px */
     background: linear-gradient(to top, #ffd700, #fff2b2);
     border-radius: 50% 50% 0 0;
     z-index: 3;
@@ -212,7 +208,7 @@ body.night-mode #night-mode-toggle {
 .floating-phrase {
     position: absolute;
     color: #911708;
-    font-size: 22px;
+    font-size: 4vw; /* escala con pantalla */
     font-style: italic;
     white-space: nowrap;
     user-select: none;
@@ -225,6 +221,7 @@ body.night-mode #night-mode-toggle {
     animation: fallAndFade 2.5s ease-in forwards;
     pointer-events: none;
 }
+
 
 @keyframes floatUp {
     0% {
@@ -264,106 +261,10 @@ body.night-mode #night-mode-toggle {
     height: 100%;
     pointer-events: none;
 
-    /* --- Responsive para móviles --- */
-@media (max-width: 768px) {
-    .sunflower-container {
-        transform: scale(1.4); /* agranda más el girasol */
-        bottom: -5vh;
-    }
-
-    .head {
-        width: 45vw;   /* más grande para que se vean los pétalos */
-        height: 45vw;
-        bottom: 35vh;
-    }
-
-    .center {
-        width: 20vw;
-        height: 20vw;
-    }
-
-    .stem {
-        width: 3vw;
-        height: 50vh;
-    }
-
-    .leaf.leaf-1 {
-        width: 15vw;
-        height: 20vw;
-        bottom: 22vh;
-        left: 8vw;
-    }
-
-    .leaf.leaf-2 {
-        width: 14vw;
-        height: 18vw;
-        bottom: 14vh;
-        left: 22vw;
-    }
-
-    .floating-phrase {
-        font-size: 7vw; /* letras más grandes en móvil */
-        color: #ffffff;
-        -webkit-text-stroke: 2.5px black; /* borde negro más grueso */
-        text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
-    }
-
-    #night-mode-toggle {
-        font-size: 5vw; /* botón más grande */
-        padding: 3vw 4vw;
-    }
-}
-/* --- Responsive especial para celulares --- */
-@media (max-width: 480px) {
-    .sunflower-container {
-        transform: scale(1.8); /* agranda bastante el girasol */
-        bottom: -20px;
-    }
-
-    .head {
-        width: 220px;   /* tamaño fijo en celular */
-        height: 220px;
-        bottom: 260px;
-    }
-
-    .center {
-        width: 100px;
-        height: 100px;
-    }
-
-    .stem {
-        width: 14px;
-        height: 320px;
-    }
-
-    .leaf.leaf-1 {
-        width: 80px;
-        height: 100px;
-        bottom: 160px;
-        left: 30px;
-    }
-
-    .leaf.leaf-2 {
-        width: 75px;
-        height: 90px;
-        bottom: 110px;
-        left: 120px;
-    }
-
-    .floating-phrase {
-        font-size: 24px; /* letras grandes y claras */
-        color: #ffffff;
-        -webkit-text-stroke: 3px black;
-        text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
-    }
-
-    #night-mode-toggle {
-        font-size: 16px; /* botón más grande y legible */
-        padding: 10px 16px;
-    }
+   
 }
 
-}</style>
+</style>
 </head>
 <body>
 
